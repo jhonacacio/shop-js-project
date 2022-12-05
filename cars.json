@@ -1,0 +1,210 @@
+[
+    {
+        "id": 1,
+        "title": "Tiggo 3",
+        "category": "Suv",
+        "yearCar": 2020,
+        "priceList": 10990.00,
+        "price": 8990.00,
+        "brand": "Chery",
+        "logo": "./assets/img/chery.jpg",
+        "image" : "./assets/img/1.jpg"
+    }
+    ,
+
+    {
+        "id": 2,
+        "title": "Durango",
+        "category": "Suv",
+        "yearCar": 2020,
+        "priceList": 20990.00,
+        "price": 16720.00,
+        "brand": "Dodge",
+        "logo": "./assets/img/dodge.jpg",
+        "image" : "./assets/img/2.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "C5 Aircross",
+        "category": "Suv",
+        "yearCar": 2020,
+        "priceList": 21200,
+        "price": 17200,
+        "brand": "Citroen",
+        "logo": "./assets/img/citroen.jpg",
+        "image" : "./assets/img/3.jpg"
+    },
+
+    {
+        "id": 4,
+        "title": "Ridgeline",
+        "category": "Camioneta",
+        "yearCar": 2020,
+        "priceList":15000,
+        "price": 9890,
+        "brand": "Honda",
+        "logo": "./assets/img/honda.jpg",
+        "image" : "./assets/img/4.jpg"
+    },
+
+    {
+        "id": 5,
+        "title": "Wrangler",
+        "category": "Camioneta",
+        "yearCar": 2020,
+        "price": 11990,
+        "priceList":16990,
+        "brand": "Jeep",
+        "logo": "./assets/img/jeep.jpg",
+        "image" : "./assets/img/5.jpg"
+    },
+
+    {
+        "id": 6,
+        "title": "Gladiator",
+        "category": "Camioneta",
+        "yearCar": 2019,
+        "priceList":18990,
+        "price": 11990,
+        "brand": "Jeep",
+        "logo": "./assets/img/jeep.jpg",
+        "image" : "./assets/img/6.jpg"
+    },
+
+    {
+        "id": 7,
+        "title": "C-elysee",
+        "category": "Sedan",
+        "yearCar": 2021,
+        "priceList": 10990,
+        "price": 8890,
+        "brand": "Citroen",
+        "logo": "./assets/img/citroen.jpg",
+        "image" : "./assets/img/7.jpg"
+    },
+
+    {
+        "id": 8,
+        "title": "Cronos",
+        "category": "Sedan",
+        "yearCar": 2021,
+        "priceList":12990,
+        "price": 9960,
+        "brand": "Fiat",
+        "logo": "./assets/img/fiat.jpg",
+        "image" : "./assets/img/8.jpg"
+    },
+
+    {
+        "id": 9,
+        "title": "Accord",
+        "category": "Sedan",
+        "yearCar": 2022,
+        "priceList": 12990,
+        "price": 10990,
+        "brand": "Honda",
+        "logo": "./assets/img/honda.jpg",
+        "image" : "./assets/img/9.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Oli",
+        "category": "Suv",
+        "yearCar": 2023,
+        "priceList": 9151,
+        "price": 7842,
+        "brand": "Citroen",
+        "logo": "./assets/img/citroen.jpg",
+        "image" : "./assets/img/10.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Vigus Plus",
+        "category": "Camioneta",
+        "yearCar": 2023,
+        "priceList": 19504,
+        "price": 18314,
+        "brand": "JMC",
+        "logo": "./assets/img/jmc.jpg",
+        "image" : "./assets/img/11.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Tiggo 7 Pro",
+        "category": "Suv",
+        "yearCar": 2023,
+        "priceList": 19990,
+        "price": 16490,
+        "brand": "Chery",
+        "logo": "./assets/img/chery.jpg",
+        "image" : "./assets/img/12.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Corlay",
+        "category": "Suv",
+        "yearCar": 2021,
+        "priceList": 16990,
+        "price": 14990,
+        "brand": "Geely",
+        "logo": "./assets/img/geely.jpg",
+        "image" : "./assets/img/13.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Civic",
+        "category": "Sedan",
+        "yearCar": 2022,
+        "priceList": 26390,
+        "price": 25490,
+        "brand": "Honda",
+        "logo": "./assets/img/honda.jpg",
+        "image" : "./assets/img/14.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Cerato 5",
+        "category": "Sedan",
+        "yearCar": 2022,
+        "priceList": 23490,
+        "price": 22990,
+        "brand": "Kia Motors",
+        "logo": "./assets/img/kia.jpg",
+        "image" : "./assets/img/15.jpg"
+    },
+    {
+        "id": 16,
+        "title": "New Mg3",
+        "category": "Sedan",
+        "yearCar": 2023,
+        "priceList": 11390,
+        "price": 10890,
+        "brand": "Mg",
+        "logo": "./assets/img/mg.jpg",
+        "image" : "./assets/img/16.jpg"
+    },
+    {
+        "id": 17,
+        "title": "New Musso",
+        "category": "Camioneta",
+        "yearCar": 2021,
+        "priceList": 23430,
+        "price": 22630,
+        "brand": "Ssangyong",
+        "logo": "./assets/img/ssang.jpg",
+        "image" : "./assets/img/17.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Eclipse Cross",
+        "category": "Suv",
+        "yearCar": 2023,
+        "priceList": 22990,
+        "price": 21990,
+        "brand": "Mitsubishi",
+        "logo": "./assets/img/mitsubishi.jpg",
+        "image" : "./assets/img/18.jpg"
+    }
+
+]
