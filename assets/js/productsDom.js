@@ -1,8 +1,8 @@
 function displayProducts(data, section) {
   const html = data
     .map((item) => {
-      const { title, id, price,priceList, image,category,brand, logo,yearCar } = item;
-      return `    <div class="col-12 col-md-6 col-lg-3">
+      const { title, id, price,priceList, image,category, logo,yearCar } = item;
+      return `    <div class="col-6 col-md-6 col-lg-3">
       <div class="card features-card" data-id=${id}>
         <div class="card-body d-flex flex-column justify-content-between">
           <div class="card-img-top ">

@@ -1,4 +1,4 @@
-// select items
+// seleccionar items
 const productsFilter = getElement(".product-content");
 
 function priceFilter(data) {

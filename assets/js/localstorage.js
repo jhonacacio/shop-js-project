@@ -2,16 +2,16 @@
 const getElement = (selection) => {
   const element = document.querySelector(selection);
   if (element) return element;
-  throw new Error(`There is no such element: ${selection}, please check`);
+  throw new Error(`No existe tal elemento: ${selection}, por favor, compruebe`);
 };
 
-// set item  to localstorage
+// establecer elemento en localstorage
 function setLocalStorage(key, value) {
   const theValue = JSON.stringify(value);
   window.localStorage.setItem(key, theValue);
 }
 
-// get item form local storage
+// obtener elemento de local storage
 
 function getLocalStorage(key) {
   const element = JSON.parse(window.localStorage.getItem(key));

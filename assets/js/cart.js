@@ -1,33 +1,32 @@
 
 function addToCart(id, amt) {
-  // get the cart from loacal storage
+  // obtener carrito del local storage
   let cart = getLocalStorage("cart");
-  // look for the product in the cart with his id
+  // busca el producto en el carrito con su id
   const item = cart.find((cartItem) => cartItem.id == id);
-  // case:product is't in the cart
+  // caso: el producto no está en el carrito
   if (!item) {
-    // getting product from the store
+    // conseguir producto de la tienda
     const prod = findProduct(id);
     const product = { amount: amt, ...prod };
-    // adding prodcut to cart
+    // agregando producto al carrito
     cart.push(product);
-    // adding product to the DOM
+    // agregando producto al DOM
     addToCartDOM(product);
     increaseCart();
     decreaseCart();
-
-    // update cart inj the localstorage
+    // actualizar el carrito en el local storage
     setLocalStorage("cart", cart);
-    // update the count and total
+    // actualizar el conteo y el total
     cartCount();
     cartTotal();
   }
-  // case that the item is in the cart
+  // caso de que el artículo esté en el carrito
   else if (item) {
-    // update ythe amount in the cart
+    // actualizar la cantidad en el carrito
     item.amount += amt;
     const cartAmount = document.querySelectorAll(".cart-amount");
-    // update amount in theDOM
+    // cantidad de actualización en el DOM
     if (cartAmount.length > 0) {
       cartAmount.forEach((amount) => {
         if (amount.dataset.id == item.id) {
@@ -35,14 +34,14 @@ function addToCart(id, amt) {
         }
       });
     }
-    // update cart localstorage
+    // actualizar carrito de localstorage
     setLocalStorage("cart", cart);
     cartCount();
     cartTotal();
   }
 }
 
-// find product in the store
+// encontrar producto en la tienda
 function findProduct(id) {
   let store = getLocalStorage("store");
 
@@ -50,7 +49,7 @@ function findProduct(id) {
   return product;
 }
 
-// cart count
+// conteo de carritos
 function cartCount() {
   const cart = getLocalStorage("cart");
   const countIcon = getElement(".count-icon");
@@ -67,7 +66,7 @@ function cartCount() {
   }
 }
 
-// cart total
+// Total carrito
 function cartTotal() {
   const cart = getLocalStorage("cart");
   const total = getElement(".cart-footer");
@@ -87,12 +86,12 @@ function cartTotal() {
   }
 }
 
-// add prodcut to cartDOM
+// agregar producto al carrito en el Dom
 function addToCartDOM(product) {
   // remove empty msg
   const emptyMsg = getElement(".cart-emty-msg");
   emptyMsg.classList.add("hide");
-  const { title, id, amount, image, price } = product;
+  const { title, id, amount, image, price,brand } = product;
   const article = document.createElement("article");
   article.setAttribute("data-id", id);
   article.classList.add(
@@ -112,7 +111,7 @@ function addToCartDOM(product) {
   class="col-8 ps-2 align-items-end d-flex justify-content-between align-items-center"
 >
   <div class="text d-inline-block">
-    <h1 class="fs-5 product-name-cart mb-0">${title}</h1>
+    <h1 class="fs-5 product-name-cart mb-0">${title} ${brand}</h1>
     <p class="text-muted mb-1 cart-price">${formatPrice(price)}</p>
     <span class="fs-6 fw-bold text-decoration-underline remove" data-id=${id}
       >Eliminar</span
@@ -143,20 +142,19 @@ function addToCartDOM(product) {
 </div>`;
   const cartContent = getElement(".cart-content");
   cartContent.appendChild(article);
-  // select btns
   removeItem();
 }
 
-// remove item from the cart
+// eliminar producto del carrito
 function removeItem() {
   const removeBtns = document.querySelectorAll(".remove");
   if (removeBtns.length > 0) {
     removeBtns.forEach((remove) => {
       remove.addEventListener("click", function (e) {
         const id = e.currentTarget.dataset.id;
-        // remove item from the DOM
+        // eliminar producto del dom
         e.currentTarget.parentElement.parentElement.parentElement.remove();
-        // remove item from the local storage
+        // eliminar producto del local storage
         let cart = getLocalStorage("cart");
         const cartRemove = cart.filter((item) => {
           return item.id != id;
@@ -167,7 +165,7 @@ function removeItem() {
           emtyMsg.classList.remove("hide");
           cartCount();
         }
-        // update count and total values
+        // uactualizar conteo y valores
         cartCount();
         cartTotal();
       });
@@ -175,7 +173,7 @@ function removeItem() {
   }
 }
 
-// icrease cart
+// aumentar carrito
 function increaseCart() {
   const increaseBtns = document.querySelectorAll(".cart-increase");
   if (increaseBtns) {
@@ -234,7 +232,7 @@ function decreaseCart() {
   }
 }
 
-//cart
+//carrito
 function CartUnit() {
   const cart = getLocalStorage("cart");
   cartCount();

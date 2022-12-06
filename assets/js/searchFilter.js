@@ -1,4 +1,4 @@
-// select items
+// seleccionar items
 const products = getElement(".product-content");
 const searchForm = getElement(".search-form");
 const theValue = getElement('[type="search"]');
@@ -22,7 +22,7 @@ function searchFilter(data) {
         displayProducts(filtredData, products);
       } else {
         const products = getElement(".product-content");
-        products.innerHTML = `<p class='text-center h1 lead text-muted text-capitalize' >Sorry there is no product with that name: ${value}</p>`;
+        products.innerHTML = `<p class='text-center h1 lead text-muted text-capitalize' >Lo sentimos, no hay ningún producto con ese nombre: ${value}</p>`;
       }
     }
   });

@@ -1,34 +1,34 @@
-// select item
+// seleccionar item
 const productsCategories = getElement(".product-content");
 function categoriesFilter(data) {
-  // getting categories
+  // obtener categorias
   displayCategories(data);
-  //   select categories
+  //   seleccionar categorias
   const categoriesBtn = displayCategories(data);
-  // category filter start
+  // inicio de filtro de categoría
 
   categoriesBtn.forEach((it) => {
     it.addEventListener("click", function (e) {
-      // getting category from each btn
+      // obtener la categoría de cada boton
       const category = e.currentTarget.dataset.category;
 
-      //   add active class to active btn
+      //   agregar clase activa a boton activo
       categoriesBtn.forEach((cat) => {
         cat.classList.add("active");
         if (cat !== e.currentTarget) {
           cat.classList.remove("active");
         }
       });
-      //   filter data with category
+      //   filtrar datos con categoría
       const filtredData = data.filter((item) => {
         return item.category.startsWith(category);
       });
-      //   display filtred data
+      //   mostrar datos filtrados
       displayProducts(filtredData, productsCategories);
-      // add serach filter
+      // añadir filtro de búsqueda
       searchFilter(filtredData);
       priceFilter(filtredData);
-      // add price filter
+      // añadir filtro de precio
       if (category === "Todos") {
         displayProducts(data, productsCategories);
         searchFilter(filtredData);
@@ -36,7 +36,7 @@ function categoriesFilter(data) {
       }
     });
   });
-  //   categories filer end
+//
 }
 
 function displayCategories(data) {
